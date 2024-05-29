@@ -90,7 +90,7 @@
         .gamesttx{
             position: absolute;
             top: 240px;
-            right: 50px;
+            right: -580px;
             z-index: 2;
         }
         
@@ -146,12 +146,16 @@
                 </div>
                     <div class="content2 con2">
                     <img src="image/new games.png" alt="" class="games">
+                </div>
+                <div class="content2 con2-1">
                     <img src="image/gametext.png" alt="" class="gamesttx">
                 </div>
                 <div class="content3 con3">
                 <img src="image/about.png" alt="" class="about">
-                <img src="image/abouttext.png" alt="" class="aboutttx">
                 </div>
+                <div class="content3 con3-1">
+                    <img src="image/abouttext.png" alt="" class="aboutttx">
+                    </div>
                 </div>
             </div>
         </div>
@@ -178,9 +182,29 @@
         stagger: 0.1
     })
 
+    const contxEls = document.querySelectorAll('.wrap .con2-1')
+    gsap.from(contxEls, {
+        delay: 2.5,
+        duration: 2,
+        scale: .3,
+        ease: "expo.out",
+        opacity: 0,
+        stagger: 0.1
+    })
+
     const contEls = document.querySelectorAll('.wrap .con3')
     gsap.from(contEls, {
         delay: 3,
+        duration: 2,
+        scale: .3,
+        ease: "expo.out",
+        opacity: 0,
+        x: 150,
+    })
+
+    const contxxEls = document.querySelectorAll('.wrap .con3-1')
+    gsap.from(contxxEls, {
+        delay: 3.5,
         duration: 2,
         scale: .3,
         ease: "expo.out",
